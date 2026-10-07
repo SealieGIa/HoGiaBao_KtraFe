@@ -1,0 +1,292 @@
+﻿* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    background: #f1f2f4;
+    color: #222
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #1f2a37;
+    padding: 12px 24px;
+    width: 100%
+}
+
+.logo {
+    white-space: nowrap
+
+}
+
+.logo, .logo:visited, .logo:hover, .logo:active, .logo:focus {
+    color: #fde68a;
+    text-decoration: none;
+}
+
+.logo i {
+    color: #fde68a;
+}
+
+.search {
+    flex: 1;
+    display: flex
+}
+
+    .search input {
+        flex: 1;
+        padding: 10px 14px;
+        border: 0;
+        border-radius: 6px 0 0 6px;
+        font-size: 14px
+    }
+
+    .search button {
+        border: 0;
+        background: #f59e0b;
+        padding: 0 18px;
+        border-radius: 0 6px 6px 0;
+        cursor: pointer;
+        font-size: 16px
+    }
+
+.cart-link {
+    position: relative;
+    color: #fff;
+    font-size: 26px;
+    text-decoration: none
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -14px;
+    background: #f59e0b;
+    color: #1f2a37;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 5px
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 16px;
+    align-items: flex-start
+}
+
+.cart {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 26px
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 20px
+}
+
+.item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid #e5e7eb
+}
+
+.thumb {
+    font-size: 34px;
+    color: #6b7280;
+    background: #f3f4f6;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0
+}
+
+img.thumb {
+    display: block;
+    object-fit: cover;
+    padding: 0
+}
+
+.info {
+    flex: 1
+}
+
+    .info h3 {
+        margin: 0 0 6px;
+        font-size: 16px
+    }
+
+.stock {
+    margin: 0 0 10px;
+    color: #15803d;
+    font-size: 12px
+}
+
+.select-all {
+    display: block;
+    margin: 0 0 6px;
+    font-size: 13px;
+    cursor: pointer
+}
+
+    .chk, .select-all input {
+        width: 18px;
+        height: 18px;
+        accent-color: #f59e0b;
+        cursor: pointer;
+        flex-shrink: 0
+    }
+
+.checkout:disabled {
+    background: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed
+}
+
+.qty {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    overflow: hidden
+}
+
+    .qty button {
+        border: 0;
+        background: #fef3c7;
+        padding: 7px 12px;
+        cursor: pointer
+    }
+
+        .qty button:hover {
+            background: #fde68a
+        }
+
+.q {
+    min-width: 36px;
+    text-align: center;
+    font-weight: 700
+}
+
+.money {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.unit {
+    font-size: 18px;
+    font-weight: 700
+}
+
+.money b {
+    color: #b12704
+}
+
+.subtotal {
+    text-align: right;
+    font-size: 18px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 14px;
+    margin: 0
+}
+
+.summary {
+    width: 280px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px
+}
+
+    .summary p {
+        margin: 0 0 6px
+    }
+
+.big {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 14px !important
+}
+
+.checkout {
+    width: 100%;
+    padding: 11px;
+    border: 0;
+    border-radius: 20px;
+    background: #f59e0b;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px
+}
+
+    .checkout:hover {
+        background: #d97706
+    }
+
+.your-items {
+    margin-top: 0
+}
+
+.saved {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.saved-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+    border-radius: 8px
+}
+
+    .saved-item .thumb {
+        width: 60px;
+        height: 60px;
+        font-size: 24px
+    }
+
+    .saved-item span {
+        flex: 1
+    }
+
+@media(max-width:800px) {
+    .container {
+        flex-direction: column
+    }
+
+    .summary {
+        width: 100%
+    }
+
+    .item {
+        flex-wrap: wrap
+    }
+}

@@ -1,0 +1,112 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Shopping Cart</title>
+    <script src="https://kit.fontawesome.com/1d81d6a17a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Content/ShoppingCart.css">
+
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#"><i class="fas fa-store"></i>Shopping Cart</a>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm sản phẩm...">
+            <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <a class="cart-link" href="#">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="badge">0</span>
+        </a>
+    </header>
+
+    <main class="container">
+        <section class="cart">
+            <h1>Giỏ hàng</h1>
+            <label class="select-all"><input type="checkbox" id="chk-all" checked>Chọn tất cả</label>
+            <div class="item" data-price="47.99">
+                <input type="checkbox" class="chk" checked>
+                <img class="thumb" src="~/Content/Img/Túi Đeo Vai.png" alt="Túi Đeo Vai Nữ" />
+                <div class="info">
+                    <h3>Túi đeo vai da nữ</h3>
+                    <p class="stock"><i class="fas fa-check-circle"></i>Còn hàng</p>
+                    <div class="qty">
+                        <button class="minus" type="button"><i class="fas fa-minus"></i></button>
+                        <span class="q">1</span>
+                        <button class="plus" type="button"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="money">
+                    <span class="unit">$47.99</span>
+                    <span>Thành tiền: <b>$<span class="line-total">47.99</span></b></span>
+                </div>
+            </div>
+
+            <div class="item" data-price="98.00">
+                <input type="checkbox" class="chk" checked>
+                <img class="thumb" src="~/Content/Img/Cao Gót Nữ.png" />
+                <div class="info">
+                    <h3>Giày cao gót nữ, size 10</h3>
+                    <p class="stock"><i class="fas fa-check-circle"></i>Còn hàng</p>
+                    <div class="qty">
+                        <button class="minus" type="button"><i class="fas fa-minus"></i></button>
+                        <span class="q">1</span>
+                        <button class="plus" type="button"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="money">
+                    <span class="unit">$98.00</span>
+                    <span>Thành tiền: <b>$<span class="line-total">98.00</span></b></span>
+                </div>
+            </div>
+
+            <div class="item" data-price="29.99">
+                <input type="checkbox" class="chk" checked>
+                <img class="thumb" src="~/Content/Img/Áo tay lỡ.png" />
+                <div class="info">
+                    <h3>Áo kiểu nữ tay lỡ, size L</h3>
+                    <p class="stock"><i class="fas fa-check-circle"></i>Còn hàng</p>
+                    <div class="qty">
+                        <button class="minus" type="button"><i class="fas fa-minus"></i></button>
+                        <span class="q">1</span>
+                        <button class="plus" type="button"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="money">
+                    <span class="unit">$29.99</span>
+                    <span>Thành tiền: <b>$<span class="line-total">29.99</span></b></span>
+                </div>
+            </div>
+
+            <p class="subtotal">Tạm tính (<span id="sub-qty">0</span> sản phẩm): <b>$<span id="sub-total">0.00</span></b></p>
+        </section>
+
+        <aside class="summary">
+            <p>Tạm tính (<span id="side-qty">0</span> sản phẩm)</p>
+            <p class="big">$<span id="side-total">0.00</span></p>
+            <button class="checkout" type="button"><i class="fas fa-lock"></i> Thanh toán</button>
+        </aside>
+    </main>
+
+    <!-- Mục "Sản phẩm của bạn" -->
+    <section class="container your-items">
+        <div class="cart">
+            <h2>Sản phẩm của bạn</h2>
+            <h3>Đã Mua</h3>
+            <div class="saved">
+                <div class="saved-item"><img class="thumb" src="~/Content/Img/sneaker.png" /><span>Giày sneaker nữ</span><b>$43.99</b></div>
+                <div class="saved-item"><img class="thumb" src="~/Content/Img/Giày nam.png" /><span>Giày đi bộ nam</span><b>$29.99</b></div>
+                <div class="saved-item"><img class="thumb" src="~/Content/Img/Mũ lưỡi trai.png" /><span>Mũ lưỡi trai</span><b>$16.50</b>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/JavaScript/ShoppingCart.js"></script>
+
+</body>
+</html>
